@@ -1,38 +1,37 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Candal&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: sans-serif, Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif; */
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  text-align: center;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* footerr section css */
+.list-item {
+  transition: background-color 0.3s, color 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.list-item:hover {
+  background-color: black;
+  color: white; /* This will change the icon color to white */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.list-item:hover .icon {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.SmallerFilter {
+  right: 0;
+  transform: translateX(150%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SmallerFilter.translate-x-0 {
+  transform: translateX(-40%);
 }
